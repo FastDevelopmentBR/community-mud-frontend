@@ -3,12 +3,16 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // Custom Modules
+import { SecurityModule } from './security/security.module';
 import { SharedModule } from './shared/shared.module';
 
 // Websocket
 import { environment } from '../environments/environment';
 import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
 import { GameSocketDataService } from './services/game-socket-data.service';
+
+//Services
+import { ThemeService } from './services/theme.service';
 
 // Routes
 import { AppRoutingModule } from './app-routing.module';
@@ -34,8 +38,12 @@ const config: SocketIoConfig = {
         SocketIoModule.forRoot(config),
 
         SharedModule,
+        SecurityModule,
     ],
-    providers: [GameSocketDataService],
+    providers: [
+        ThemeService,
+        GameSocketDataService
+    ],
     bootstrap: [AppComponent]
 })
 export class AppModule { }

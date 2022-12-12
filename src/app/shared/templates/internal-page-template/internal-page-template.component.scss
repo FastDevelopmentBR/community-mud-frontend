@@ -1,0 +1,19 @@
+$contentPadding: 10px;
+
+.toolbar-spacer {
+    flex: 1 1 auto;
+}
+
+.content {
+    padding: $contentPadding;
+
+    $toolbarHeight: 64px;
+    height: calc(100% - $toolbarHeight - ($contentPadding * 2));
+}
+
+@media (max-width: 599px) {
+    .content {
+        $toolbarHeight: 56px;
+        height: calc(100% - $toolbarHeight - ($contentPadding * 2));
+    }
+}
