@@ -1,0 +1,28 @@
+<commud-internal-page-template>
+    <main>
+        <section class="console">
+            <p *ngFor="let consoleMessage of consoleMessages">
+                [{{consoleMessage.date}}]: {{ consoleMessage.message }}
+            </p>
+        </section>
+
+        <form (ngSubmit)="sendMessage(formUserInput.value)">
+            <mat-form-field>
+                <input matInput
+                       ngModel
+                       #formUserInput="ngModel"
+                       required
+                       autofocus
+                       type="text"
+                       id="userInput"
+                       name="userInput"
+                       placeholder="Digite alguma mensagem ou comando">
+                <mat-hint>Envie /help para conhecer todas as possibilidades de interação.</mat-hint>
+            </mat-form-field>
+            <button type="submit"
+                    mat-button
+                    color="primary"
+                    [disabled]="formUserInput.invalid">Enviar</button>
+        </form>
+    </main>
+</commud-internal-page-template>

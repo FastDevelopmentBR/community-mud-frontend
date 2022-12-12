@@ -1,0 +1,29 @@
+main {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    row-gap: 12px;
+    color: #fff;
+    overflow-y: auto;
+    height: 100%;
+
+    .console {
+        background-color: #000;
+        border-radius: 0.375rem;
+        padding: 10px;
+
+        p {
+            margin-bottom: 0;
+        }
+    }
+
+    form {
+        display: flex;
+        justify-content: flex-end;
+        align-items: baseline;
+        column-gap: 10px;
+
+        mat-form-field {
+            width: 100%;
+        }
+    }
+}

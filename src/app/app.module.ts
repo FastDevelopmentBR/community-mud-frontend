@@ -19,6 +19,10 @@ import { AppRoutingModule } from './app-routing.module';
 
 // Pages
 import { AppComponent } from './app.component';
+import { GamePageComponent } from './pages/game-page/game-page.component';
+import { LoginPageComponent } from './pages/login-page/login-page.component';
+import { ForgotPasswordPageComponent } from './pages/forgot-password-page/forgot-password-page.component';
+import { PlayerProfilePageComponent } from './pages/player-profile-page/player-profile-page.component';
 
 const config: SocketIoConfig = {
     url: environment.api,
@@ -30,6 +34,10 @@ const config: SocketIoConfig = {
 @NgModule({
     declarations: [
         AppComponent,
+        GamePageComponent,
+        LoginPageComponent,
+        ForgotPasswordPageComponent,
+        PlayerProfilePageComponent
     ],
     imports: [
         BrowserModule,
