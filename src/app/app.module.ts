@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+// Custom Modules
+import { SharedModule } from './shared/shared.module';
 
 // Websocket
 import { environment } from '../environments/environment';
