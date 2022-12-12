@@ -1,39 +1,37 @@
+@import "/src/styles/_variables";
 
-// Custom Theming for Angular Material
-// For more information: https://material.angular.io/guide/theming
-@use '@angular/material' as mat;
-// Plus imports for other components in your app.
+html,
+body {
+    height: 100%;
+}
 
-// Include the common styles for Angular Material. We include this here so that you only
-// have to load a single css file for Angular Material in your app.
-// Be sure that you only ever include this mixin once!
-@include mat.core();
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    transition: background-color 300ms 0ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 
-// Define the palettes for your theme using the Material Design palettes available in palette.scss
-// (imported above). For each palette, you can optionally specify a default, lighter, and darker
-// hue. Available color palettes: https://material.io/design/color/
-$community-mud-frontend-primary: mat.define-palette(mat.$indigo-palette);
-$community-mud-frontend-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+.material-icons {
+    direction: ltr;
+    display: inline-block;
+    font-family: "Material Icons";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: normal;
+    line-height: 1;
+    text-transform: none;
+    white-space: nowrap;
+    word-wrap: normal;
+    -webkit-font-feature-settings: "liga";
+    -webkit-font-smoothing: antialiased;
+}
 
-// The warn palette is optional (defaults to red).
-$community-mud-frontend-warn: mat.define-palette(mat.$red-palette);
+mat-list-item a {
+    &::after,
+    &::before {
+        @extend .material-icons;
+    }
+}
 
-// Create the theme object. A theme consists of configurations for individual
-// theming systems such as "color" or "typography".
-$community-mud-frontend-theme: mat.define-light-theme((
-  color: (
-    primary: $community-mud-frontend-primary,
-    accent: $community-mud-frontend-accent,
-    warn: $community-mud-frontend-warn,
-  )
-));
-
-// Include theme styles for core and each component used in your app.
-// Alternatively, you can import and @include the theme mixins for each component
-// that you are using.
-@include mat.all-component-themes($community-mud-frontend-theme);
-
-/* You can add global styles to this file, and also import other style files */
-
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+@import "/src/styles/input-fixes";
