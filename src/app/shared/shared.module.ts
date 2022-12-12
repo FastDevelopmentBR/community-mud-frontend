@@ -4,14 +4,24 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
+// Imported Custom Modules
+import { MaterialAngularModule } from './material-angular/material-angular.module';
+
+// Components
+import { MdLayoutGridCellComponent } from './components/md-layout-grid-cell/md-layout-grid-cell.component';
+
 @NgModule({
-    declarations: [],
+    declarations: [
+        MdLayoutGridCellComponent
+    ],
     imports: [
         CommonModule,
         RouterModule,
         HttpClientModule,
         FormsModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+
+        MaterialAngularModule
     ],
     exports: [
         CommonModule,
@@ -19,6 +29,9 @@ import { RouterModule } from '@angular/router';
         HttpClientModule,
         FormsModule,
         ReactiveFormsModule,
+
+        MaterialAngularModule,
+        MdLayoutGridCellComponent
     ]
 })
 export class SharedModule { }
