@@ -131,6 +131,5 @@
         }
       }
     }
-  },
-  "defaultProject": "community-mud-frontend"
+  }
 }
