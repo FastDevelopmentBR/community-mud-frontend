@@ -1,27 +1,27 @@
-# CommunityMudFrontend
+# community-mud-frontend
+Esse é o client de um MultiUser Dungeon (rpg baseado em texto). Para utilizá-lo é necessário conectá-lo a uma instância de servidor do CommunityMUD (community-mud-backend).
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.3.
+## Instalação
 
-## Development server
+```bash
+$ npm install
+```
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Rodando a aplicação
 
-## Code scaffolding
+```bash
+# development
+$ npm start
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Documentações
+<a href="https://drive.google.com/drive/folders/19GYy39HNOUnAPsD6v0ji23vtTp7FQ0oi?usp=sharing" target="_blank">Google Drive</a>
 
-## Build
+## Mantenedores
+- [Pablo Pereira](https://github.com/pablopereira27)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Licença
+[![Licença GPLv3](https://img.shields.io/github/license/FastDevelopmentBR/community-mud-backend?label=Licen%C3%A7a&style=flat-square)](LICENSE)
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+O link abaixo contém uma tradução da licença que pode estar desatualizada em relação a versão utilizada no projeto.<br/>
+[![Licença GPLv3 (pt-BR)](https://img.shields.io/github/license/FastDevelopmentBR/community-mud-backend?label=Licen%C3%A7a%20(pt-BR)&style=flat-square)](https://www.gnu.org/licenses/quick-guide-gplv3.pt-br.html)
